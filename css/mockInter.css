@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('./reset_cssV1.css');
+
+:root {
+
+    --main-Color: #0e387a;
+    --white: #fff;
+    --background: #f1f4f6;
+    --border: #eeeeee;
+
+
+    --pageHeader: 46px;
+    --sectionHeader: 36px;
+    --subheader: 24px;
+
+
+    --size-xxs: 2px;
+    --size-xs: 5px;
+    --size-s: 10px;
+    --size: 1rem;
+    --size-m: 1.5rem;
+    --size-l: 2rem;
+    --size-xl: 2.5rem;
+    --size-xxl: 3rem;
+}
+
+* {
+    outline-offset: 3px;
+    outline-color: var(--main-Color);
+}
+
+body {
+    font-family: 'Roboto', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--background);
+}
+
+.mainText {
+    color: var(--main-Color);
+}
+
+.mainHeading {
+    font-size: var(--pageHeader);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.Subheader {
+    font-size: var(--subheader);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.secondary-brandBTn {
+    border: 1px solid var(--main-Color);
+    background-color: transparent;
+    padding: var(--size-xs);
+    border-radius: var(--size-xs);
+    font-weight: 500;
+    font-size: 18px;
+    transition: all 0.3s ease;
+
+}
+
+.secondary-brandBTn:hover,
+.secondary-brandBTn:focus-within {
+    background-color: #0e377a0a;
+    box-shadow: 0px 05px 05px 0 #0e377a1e;
+}
+
+.secondary-brandBTn:active {
+    transform: scale(0.95);
+}
+
+.topPadding {
+    padding-block: var(--size-l);
+}
+
+.defaultInterviewCard {
+    background-color: var(--white);
+    padding: var(--size);
+    border-radius: var(--size-s);
+    border: 1px solid var(--border);
+}
+
+.InterviewCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--size);
+    height: 100%;
+}
+
+.TopInterviewContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size);
+}
+
+.custflex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--size-xs);
+}
+
+.custflex .selected {
+    fill: rgb(0, 170, 14);
+    display: none;
+}
+
+.custflex .selected.active {
+    display: block;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-s);
+}
+
+.EmptyContainer {
+    color: #b1b1b1;
+    line-height: normal;
+}
+
+.EmptyContainer svg {
+    fill: #b1b1b1;
+}
+
+.TotalPayment {
+    display: none;
+}
