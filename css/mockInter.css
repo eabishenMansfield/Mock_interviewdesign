@@ -58,7 +58,9 @@ body {
     border-radius: var(--size-xs);
     font-weight: 500;
     font-size: 18px;
-    transition: all 0.3s ease;
+
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+
 
 }
 
@@ -89,12 +91,27 @@ body {
     justify-content: space-between;
     gap: var(--size);
     height: 100%;
+    position: relative;
+}
+
+.InterviewCard.active {
+    border-color: rgb(0, 170, 14);
 }
 
 .TopInterviewContainer {
     display: flex;
     flex-direction: column;
     gap: var(--size);
+}
+
+.priceCheck {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
 }
 
 .custflex {
@@ -130,4 +147,26 @@ body {
 
 .TotalPayment {
     display: none;
+}
+
+.TotalPayment.active {
+    display: block;
+}
+
+.PriceShower {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-s);
+}
+
+:has(.TotalPayment.active) .PriceShower {
+    margin-bottom: var(--size-s);
+
+}
+
+.pricer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--size-s);
 }
